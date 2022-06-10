@@ -37,7 +37,7 @@ function Register() {
                     navigate('/');
                 }
                 else {
-                    //setRegister({ ...registerInput, error_list: res.data.validation_errors });
+                    setRegister({ ...registerInput, error_list: res.data.validation_errors });
                 }
             }).catch(error => {
                 console.log(error);
