@@ -12,6 +12,8 @@ import Register from './components/frontend/auth/Register';
 import axios from 'axios';
 import ViewCategory from './components/admin/category/ViewCategory';
 import EditCategory from './components/admin/category/EditCategory';
+import AddProduct from './components/admin/product/AddProduct';
+import ViewProduct from './components/admin/product/ViewProduct';
 
 
 axios.defaults.baseURL = "http://127.0.0.1:8000/";
@@ -44,6 +46,10 @@ function App() {
             <Route path='/admin/add-category' element={<Category />} />
             <Route path='/admin/view-category' element={<ViewCategory />} />
             <Route path='/admin/edit-category/:id' element={<EditCategory />} />
+
+            <Route path='/admin/add-product' element={<AddProduct />} />
+            <Route path='/admin/view-product' element={<ViewProduct />} />
+
             <Route path='/admin' element={<Navigate to="/admin/dashboard" replace />} />
           </Route>
         </Routes>
