@@ -13,9 +13,9 @@ function EditCategory(props) {
     const [error, setError] = useState({});
     useEffect(() => {
         const category_id = id;
-        console.log(category_id);
+        //console.log(category_id);
         axios.get(`api/edit-category/${category_id}`).then(res => {
-            console.log();
+            //console.log();
             if (res.data.status === 200) {
                 setCategory(res.data.category);
             } else if (res.data.status === 404) {
